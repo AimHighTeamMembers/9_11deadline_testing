@@ -25,5 +25,10 @@ public class MenuController {
 
     }
 
+    @PostMapping("edit")
+    public String updateMenu(@RequestParam ){
+        return "edit";
+    }
+
 
 }
