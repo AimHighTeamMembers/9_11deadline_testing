@@ -8,4 +8,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface MenuMapper {
 
     void deleteMenu(int code);
+    void registNewMenu(MenuDTO newMenu);
 }
