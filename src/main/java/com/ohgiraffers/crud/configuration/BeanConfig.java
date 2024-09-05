@@ -1,4 +1,4 @@
-package com.ohgiraffers.springboottest.configuration;
+package com.ohgiraffers.crud.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,11 +1,14 @@
-package com.ohgiraffers.springboottest.menu.controller;
+package com.ohgiraffers.crud.menu.controller;
 
 import com.ohgiraffers.springboottest.menu.model.service.MenuService;
+import com.ohgiraffers.crud.menu.model.service.MenuService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

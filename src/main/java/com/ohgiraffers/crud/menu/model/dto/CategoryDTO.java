@@ -1,4 +1,4 @@
-package com.ohgiraffers.springboottest.menu.model.dto;
+package com.ohgiraffers.crud.menu.model.dto;
 
 public class CategoryDTO {
 

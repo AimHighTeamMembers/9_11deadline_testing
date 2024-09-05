@@ -1,4 +1,4 @@
-package com.ohgiraffers.springboottest.menu.model.dao;
+package com.ohgiraffers.crud.menu.model.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 
