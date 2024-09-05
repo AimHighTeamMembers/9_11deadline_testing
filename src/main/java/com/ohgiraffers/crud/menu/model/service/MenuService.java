@@ -15,4 +15,12 @@ public class MenuService {
     }
 
 
+    @Transactional
+    public void deleteMenu(int code) {
+        menuMapper.deleteMenu(code);
+    }
+    @Transactional
+    public void registNewMenu(MenuDTO newMenu) {
+        menuMapper.registNewMenu(newMenu);
+    }
 }
