@@ -1,5 +1,6 @@
 package com.ohgiraffers.crud.menu.model.dao;
 
+import com.ohgiraffers.crud.menu.model.dto.MenuDTO;
 import org.apache.ibatis.annotations.Mapper;
 
 // MyBatis의 Mapper 인터페이스임을 나타내는  org.apache.ibatis.annotation 소속의 어노테이션.
@@ -7,5 +8,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface MenuMapper {
 
-
+    void registNewMenu(MenuDTO newMenu);
 }
