@@ -35,4 +35,8 @@ public class MenuService {
     public void registNewMenu(MenuDTO newMenu) {
         menuMapper.registNewMenu(newMenu);
     }
+
+    public MenuDTO findMenuByCode(int code) {
+        return menuMapper.findMenuByCode(code);
+    }
 }
