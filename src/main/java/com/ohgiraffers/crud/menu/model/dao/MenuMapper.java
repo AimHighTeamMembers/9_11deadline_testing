@@ -10,4 +10,6 @@ public interface MenuMapper {
 
     void deleteMenu(int code);
     void registNewMenu(MenuDTO newMenu);
+
+    MenuDTO findMenuByCode(int code);
 }
