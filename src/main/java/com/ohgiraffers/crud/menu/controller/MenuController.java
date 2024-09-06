@@ -9,6 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -65,6 +69,7 @@ public class MenuController {
     @PostMapping("regist")
     public String registMenu(MenuDTO newMenu, RedirectAttributes rAttr) {
         menuService.registNewMenu(newMenu);
+
 
         rAttr.addFlashAttribute("successMessage", "신규 메뉴 등록에 성공하셨습니다.");
 
