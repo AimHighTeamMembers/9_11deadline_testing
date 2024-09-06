@@ -76,8 +76,8 @@ public class MenuController {
         return "redirect:/menu/list";
     }
 
-    @GetMapping("/detail/{code}")
-    public String findMenuDeatil(@PathVariable("code") int code,
+    @GetMapping("detail/{code}")
+    public String findMenuDetail(@PathVariable("code") int code,
                                  Model model) {
 
         MenuDTO menu = menuService.findMenuByCode(code);
@@ -86,4 +86,26 @@ public class MenuController {
 
         return "menu/detail";
     }
+    @GetMapping("edit/{code}")
+    public String showEditMenuForm(@PathVariable("code") int code, Model model) {
+
+        MenuDTO menu = menuService.findMenuByCode(code);
+
+        model.addAttribute("menu", menu);
+
+        return "menu/edit";
+    }
+
+    @PostMapping("/update")
+    public String updateMenu(MenuDTO menu, RedirectAttributes rAttr) {
+
+        menuService.updateMenu(menu);
+
+        rAttr.addFlashAttribute("successMessage","메뉴가 성공적으로 수정되었습니다.");
+
+        return "redirect:/menu/detail/" + menu.getCode();
+    }
+
+
+
 }
