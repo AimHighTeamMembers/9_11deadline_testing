@@ -47,6 +47,7 @@ public class MenuController {
     public String registMenu(MenuDTO newMenu, RedirectAttributes rAttr) {
         menuService.registNewMenu(newMenu);
 
+
         rAttr.addFlashAttribute("successMessage", "신규 메뉴 등록에 성공하셨습니다.");
 
         return "redirect:/menu/list";
