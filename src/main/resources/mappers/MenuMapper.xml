@@ -23,4 +23,12 @@
             tbl_menu (menu_name, menu_price, category_code, orderable_status)
         VALUES (#{name}, #{price}, #{categoryCode}, #{orderableStatus})
     </insert>
+
+    <delete id="deleteMenu" parameterType="int">
+        DELETE
+        FROM
+        tbl_menu
+        WHERE
+        menu_code = #{code}
+    </delete>
 </mapper>
